@@ -1,0 +1,203 @@
+/* 
+General Rules 
+*/
+:root{
+  --nav-height: 7vh;
+  --index-table-width: 60vw;
+  --index-table-margin: 20vw;
+  --index-column-number: 4;
+  --holdings-table-width: 96vw;
+  --holdings-table-margin: 2vw;
+  --holdings-column-number: 12;
+}
+/* 
+Navbar rules 
+*/
+nav{
+  background-color: rgb(82, 154, 255);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  float: left;
+  padding: 1vmin;
+}
+
+li a {
+  font-size: 3vmin;
+  display: block;
+  padding: 1vmin;
+  color: white;
+}
+li:hover{
+  background-color: rgb(44, 131, 253);
+  cursor: pointer;
+}
+nav > form > input[type=text] {
+  position: absolute;
+  right: 0;
+  margin: 1vmin;
+  font-size: 2vmin;
+  padding: 1vmin;
+}
+nav > form > input[type=text]:hover {
+  cursor: text;
+}
+/* 
+Rules for all main sections 
+*/
+#index-main{
+  width: auto;
+  margin: 25vh 20vw;
+}
+#holdings-main{
+  margin-top: calc( 2 * var(--nav-height));
+  height: 50vh;
+}
+#research-main{
+  margin-top: calc( 2 * var(--nav-height));
+  height: 70vh;
+}
+#index-main > table{
+  width: var(--index-table-width);
+  height: 40vh;
+  border: 2px solid black;
+  border-collapse: collapse;
+  font-size: 2em;
+}
+#holdings-main > table {
+  width: var(--holdings-table-width);
+  margin: 0 var(--holdings-table-margin);
+  max-height: 85vh;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+#holdings-main > p {
+  margin: -2vh var(--holdings-table-margin) 2vh;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* 
+Rules for buttons on holdings page 
+*/
+#holdings-buttons{
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(2, 10vw);
+  gap: 1.5vw;
+  position: absolute;
+  right: 2vw;
+}
+#holdings-buttons * {
+  width: 10vw;
+  padding: 0.3vh 0.3vw;
+  margin: 0.5vw;
+}
+/* 
+Rules for the children of all table rows 
+*/
+tr * {
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+/* 
+Rules for the research page 
+*/
+.research-name{
+  font-weight: bold;
+  font-size: 3.6em;
+}
+.research-price{
+  font-weight: bold;
+  font-size: 2.1em;
+}
+.research-change{
+  font-weight: bold;
+  font-size: 2.1em;
+}
+.research-information{
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #4894ff;
+  color: white;
+  border-radius: 3vw;  
+  min-width: 50vw;
+  padding: 8px;
+}
+.research-information * {
+  margin: 4px 0px;
+  padding: 4px;
+}
+/* 
+Rules for the add holdings page
+*/
+.change-holdings-form {
+  width: 50vw;
+  height: auto;
+  max-height: 50vh;
+  margin: 25vh 25vw;
+  background-color: #e7eaef;
+  border-radius: 0.3125rem;
+}
+.change-holdings-body{
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1.5rem;
+}
+.change-holdings-body > h2{
+  margin-top: 0;
+}
+.form-group{
+  display: block;
+  padding: 1vh 0;
+  margin-top: 1vh;
+}
+.input-label {
+  display: block;
+  color: #1e2022;
+  font-size: 1.175rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 1vh 0;
+  color: #1e2022;
+  background-color: #fff;
+  border: 0.0625rem solid #e7eaf3;
+  border-radius: 0.3125rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.change-holdings-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.change-holdings-buttons * {
+  padding: 0.4vh 0.8vw;
+  margin: 1.5vh 0 0 0.8vw;
+}
+/* 
+Text rules
+*/
+.table-headings{
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+.table-body{
+  font-weight: normal;
+  font-size: 1rem;
+}
