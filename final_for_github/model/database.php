@@ -1,6 +1,8 @@
 <?php
+    //set database name to what ever the desired name is
+    $dbname = "your database name";
     // connect to database
-    $dsn = 'mysql:host=localhost;dbname=cis261_final';
+    $dsn = 'mysql:host=localhost;dbname={$dbname}';
     $username = 'root';
     $password = '';
 
